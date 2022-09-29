@@ -65,7 +65,7 @@ def precipitation():
 @app.route("/api/v1.0/stations")
 def stations():
 	"""Return a list of stations."""
-	results = sessions.query(Station.station).all()
+	results = session.query(Station.station).all()
 
 	# Unravel results and convert to a list 
 	stations = list(np.ravel(results))
